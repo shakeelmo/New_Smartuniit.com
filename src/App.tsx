@@ -23,9 +23,9 @@ import { defaultContent, partnerLogos } from "./content";
 import type { Language, Lead, Post, Service, SiteContent } from "./types";
 
 const contact = {
-  phone: "+966 51 016 0212",
-  phoneHref: "tel:+966510160212",
-  whatsappHref: "https://wa.me/966510160212",
+  phone: "+966 50 990 2054",
+  phoneHref: "tel:+966509902054",
+  whatsappHref: "https://wa.me/966509902054",
   email: "info@smartuniit.com",
   mapHref:
     "https://www.google.com/maps/search/Al+Aziziyah+,+Building+3554,+Street+110+Unit+7,+Al+Aziziyah+District+Riyadh+14515+-+8574+Kingdom+of+Saudi+Arabia/@24.5868667,46.7524819,14z",
