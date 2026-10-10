@@ -1,23 +1,30 @@
-# Smart Universe Website Preview
+# Smart Universe Website
 
-React + Vite + Tailwind website for Smart Universe Communication and Information Technology.
+React + Vite + Tailwind marketing site for Smart Universe Communication and Information Technology (Riyadh).
 
 ## Features
 
 - Bilingual English/Arabic homepage
 - Interactive shader hero and solution builder
-- Services, process, partners, insights, company profile, and contact lead form
-- `/admin` page for editing site content and viewing leads
-- Express API with file-backed JSON storage for preview deployment
+- Services, process, partners, insights, company profile PDF, and contact lead form
+- `/admin` for editing site content (JSON) and viewing leads
+- Express API with file-backed JSON storage
 
-## Local Development
+## Domains
+
+- **Staging:** https://new.smartuniit.com (full app + API via reverse proxy)
+- **Production:** https://smartuniit.com and https://www.smartuniit.com (static publish; see deployment doc for API)
+
+Detailed server paths, rsync, PM2, and DNS: **[docs/DEPLOYMENT.md](docs/DEPLOYMENT.md)**.
+
+## Local development
 
 ```bash
 npm install
 npm run dev
 ```
 
-For the API server:
+API + built static preview:
 
 ```bash
 cp .env.example .env
@@ -25,16 +32,8 @@ npm run build
 npm run server
 ```
 
-## Production Preview
+Default dev admin password is `admin` when `NODE_ENV` is not production and `.env` is unset.
 
-The preview target is `new.smartuniit.com`. The Node server listens locally and should be reverse proxied by CyberPanel/OpenLiteSpeed.
+## Environment variables
 
-Required environment variables:
-
-- `PORT`
-- `DATA_DIR`
-- `ADMIN_USER`
-- `ADMIN_PASSWORD`
-- `ADMIN_SECRET`
-
-DNS must point `new.smartuniit.com` to `109.199.116.107` before public SSL can be issued.
+See `.env.example`: `PORT`, `DATA_DIR`, `ADMIN_USER`, `ADMIN_PASSWORD`, `ADMIN_SECRET`.
